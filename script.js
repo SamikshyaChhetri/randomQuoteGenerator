@@ -36,4 +36,16 @@ const quotes = {
     "Education is the passport to the future, for tomorrow belongs to those who prepare for it today. — Malcolm X",
   ],
 };
-console.log(quotes.science[1]);
+const generateQuoteButton = document.getElementById("generateQuoteButton");
+generateQuoteButton.addEventListener("click", () => {
+  const randomNumber = Math.floor(Math.random() * 10);
+  const category = document.getElementById("category").value;
+  if (category === "science")
+    //   console.log(category);
+    console.log(quotes.science[randomNumber]);
+  else if (category === "life") {
+    console.log(quotes.life[randomNumber]);
+  } else {
+    console.log(quotes.education[randomNumber]);
+  }
+});
