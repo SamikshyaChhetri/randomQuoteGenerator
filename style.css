@@ -54,3 +54,24 @@ select {
 .btn:hover {
   background-color: black;
 }
+#plus {
+  background-color: rgb(54, 178, 227);
+  font-size: larger;
+  font-weight: bold;
+  padding: 6px 12px;
+}
+#plus:hover {
+  background-color: rgb(41, 153, 197);
+}
+#minus {
+  background-color: rgb(240, 62, 62);
+  font-size: larger;
+  font-weight: bold;
+  padding: 6px 15px;
+}
+#minus:hover {
+  background-color: rgb(207, 9, 9);
+}
+#display {
+  padding-top: 1.5rem;
+}
