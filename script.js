@@ -55,12 +55,51 @@ nextButton.addEventListener("click", () => {
   const category = document.getElementById("category").value;
   if (category === "science") {
     const nextQuote = quotes.science.indexOf(displayedQuote) + 1;
+    if (nextQuote > quotes.science.length - 1) {
+      return (displayQuote.innerHTML = quotes.science[0]);
+    }
     displayQuote.innerHTML = quotes.science[nextQuote];
   } else if (category === "life") {
     const nextQuote = quotes.life.indexOf(displayedQuote) + 1;
+    if (nextQuote > quotes.life.length - 1) {
+      return (displayQuote.innerHTML = quotes.life[0]);
+    }
+
     displayQuote.innerHTML = quotes.life[nextQuote];
   } else {
     const nextQuote = quotes.education.indexOf(displayedQuote) + 1;
+    if (nextQuote > quotes.education.length - 1) {
+      return (displayQuote.innerHTML = quotes.education[0]);
+    }
     displayQuote.innerHTML = quotes.education[nextQuote];
+  }
+});
+
+const prevButton = document.getElementById("previous");
+prevButton.addEventListener("click", () => {
+  const displayedQuote = displayQuote.innerHTML;
+
+  const category = document.getElementById("category").value;
+
+  if (category === "science") {
+    const prevQuote = quotes.science.indexOf(displayedQuote) - 1;
+    if (prevQuote < 0) {
+      return (displayQuote.innerHTML =
+        quotes.science[quotes.science.length - 1]);
+    }
+    displayQuote.innerHTML = quotes.science[prevQuote];
+  } else if (category === "life") {
+    const prevQuote = quotes.life.indexOf(displayedQuote) - 1;
+    if (prevQuote < 0) {
+      return (displayQuote.innerHTML = quotes.life[quotes.life.length - 1]);
+    }
+    displayQuote.innerHTML = quotes.life[prevQuote];
+  } else {
+    const prevQuote = quotes.education.indexOf(displayedQuote) - 1;
+    if (prevQuote < 0) {
+      return (displayQuote.innerHTML =
+        quotes.education[quotes.education.length - 1]);
+    }
+    displayQuote.innerHTML = quotes.education[prevQuote];
   }
 });
