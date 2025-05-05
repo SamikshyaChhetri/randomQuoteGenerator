@@ -37,15 +37,30 @@ const quotes = {
   ],
 };
 const generateQuoteButton = document.getElementById("generateQuoteButton");
+const displayQuote = document.getElementById("display");
 generateQuoteButton.addEventListener("click", () => {
   const randomNumber = Math.floor(Math.random() * 10);
   const category = document.getElementById("category").value;
-  if (category === "science")
-    //   console.log(category);
-    console.log(quotes.science[randomNumber]);
-  else if (category === "life") {
-    console.log(quotes.life[randomNumber]);
+  if (category === "science") {
+    displayQuote.innerHTML = quotes.science[randomNumber];
+  } else if (category === "life") {
+    displayQuote.innerHTML = quotes.life[randomNumber];
   } else {
-    console.log(quotes.education[randomNumber]);
+    displayQuote.innerHTML = quotes.education[randomNumber];
+  }
+});
+const nextButton = document.getElementById("next");
+nextButton.addEventListener("click", () => {
+  const displayedQuote = displayQuote.innerHTML;
+  const category = document.getElementById("category").value;
+  if (category === "science") {
+    const nextQuote = quotes.science.indexOf(displayedQuote) + 1;
+    displayQuote.innerHTML = quotes.science[nextQuote];
+  } else if (category === "life") {
+    const nextQuote = quotes.life.indexOf(displayedQuote) + 1;
+    displayQuote.innerHTML = quotes.life[nextQuote];
+  } else {
+    const nextQuote = quotes.education.indexOf(displayedQuote) + 1;
+    displayQuote.innerHTML = quotes.education[nextQuote];
   }
 });
