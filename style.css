@@ -7,3 +7,7 @@ body {
   flex-direction: column;
   gap: 1rem;
 }
+#generateQuote {
+  font-size: 2rem;
+  font-weight: bold;
+}
