@@ -1,0 +1,9 @@
+* {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+}
