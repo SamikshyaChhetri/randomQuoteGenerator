@@ -84,7 +84,15 @@ select {
     gap: 10px;
   }
   #generateQuote {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+  }
+  body {
+    position: relative;
+  }
+  #theme {
+    position: absolute;
+    font-size: 8px !important;
+    right: 0px !important;
   }
 }
 #theme {
