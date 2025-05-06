@@ -1,3 +1,4 @@
+//object of array
 const quotes = {
   science: [
     "The important thing is not to stop questioning. — Albert Einstein",
@@ -36,6 +37,8 @@ const quotes = {
     "Education is the passport to the future, for tomorrow belongs to those who prepare for it today. — Malcolm X",
   ],
 };
+
+//generate random quote
 const generateQuoteButton = document.getElementById("generateQuoteButton");
 const displayQuote = document.getElementById("display");
 generateQuoteButton.addEventListener("click", () => {
@@ -49,6 +52,8 @@ generateQuoteButton.addEventListener("click", () => {
     displayQuote.innerHTML = quotes.education[randomNumber];
   }
 });
+
+//next button implementation
 const nextButton = document.getElementById("next");
 nextButton.addEventListener("click", () => {
   const displayedQuote = displayQuote.innerHTML;
@@ -75,6 +80,7 @@ nextButton.addEventListener("click", () => {
   }
 });
 
+//Previous button implementation
 const prevButton = document.getElementById("previous");
 prevButton.addEventListener("click", () => {
   const displayedQuote = displayQuote.innerHTML;
@@ -102,4 +108,19 @@ prevButton.addEventListener("click", () => {
     }
     displayQuote.innerHTML = quotes.education[prevQuote];
   }
+});
+
+//Font size increment functionality
+document.getElementById("plus").addEventListener("click", () => {
+  const currentSize = parseInt(displayQuote.style.fontSize);
+  const newSize = currentSize + 2 + "px";
+  displayQuote.style.fontSize = newSize;
+  console.log(newSize);
+});
+
+//font size decrement functionality
+document.getElementById("minus").addEventListener("click", () => {
+  const currentSize = parseInt(displayQuote.style.fontSize);
+  const newSize = currentSize - 2 + "px";
+  displayQuote.style.fontSize = newSize;
 });

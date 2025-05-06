@@ -72,6 +72,6 @@ select {
 #minus:hover {
   background-color: rgb(207, 9, 9);
 }
-#display {
+.display {
   padding-top: 1.5rem;
 }
