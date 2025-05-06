@@ -6,6 +6,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 .wrap {
   display: flex;
@@ -85,4 +86,31 @@ select {
   #generateQuote {
     font-size: 1.5rem;
   }
+}
+#theme {
+  position: absolute;
+  top: 2px;
+  right: 2rem;
+  background-color: black;
+  font-size: 15px;
+  padding: 8px 10px;
+}
+.dark {
+  background-color: black;
+  color: white;
+}
+.cardDark {
+  background-color: rgb(64, 64, 64);
+}
+.buttonDark {
+  background-color: rgb(169, 168, 168);
+  color: black;
+}
+.buttonDark:hover {
+  background-color: white;
+  color: black;
+}
+.whiteMode {
+  background-color: white !important;
+  color: black;
 }

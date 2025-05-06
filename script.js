@@ -124,3 +124,18 @@ document.getElementById("minus").addEventListener("click", () => {
   const newSize = currentSize - 2 + "px";
   displayQuote.style.fontSize = newSize;
 });
+
+//Theme toggle
+document.getElementById("theme").addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+  document.getElementById("wrap").classList.toggle("cardDark");
+  document.getElementById("previous").classList.toggle("buttonDark");
+  document.getElementById("next").classList.toggle("buttonDark");
+  document.getElementById("theme").classList.toggle("whiteMode");
+  const theme = document.getElementById("theme").innerHTML;
+  if (theme === "Dark Mode") {
+    document.getElementById("theme").innerHTML = "White Mode";
+  } else {
+    document.getElementById("theme").innerHTML = "Dark Mode";
+  }
+});
