@@ -77,7 +77,7 @@ select {
   padding: 2rem;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 650px) {
   .divContainer {
     display: flex;
     flex-direction: column;
