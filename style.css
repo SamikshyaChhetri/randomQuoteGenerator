@@ -73,5 +73,16 @@ select {
   background-color: rgb(207, 9, 9);
 }
 .display {
-  padding-top: 1.5rem;
+  padding: 2rem;
+}
+
+@media (max-width: 500px) {
+  .divContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  #generateQuote {
+    font-size: 1.5rem;
+  }
 }
